@@ -1,0 +1,423 @@
+@font-face {
+    font-family: "Roboto";
+    src: local("Font/"),
+    url("Font/RobotoSlab-Regular.ttf");
+  }
+
+body{
+    margin: 0;
+    font-family: "Roboto";
+}
+
+/* HEADER */
+
+header {
+    background-color: #EF6351;
+    padding: 0.7%;
+    display: flex;
+    width: 100%;
+    position: fixed;
+}
+
+@media screen and (max-width: 1150px) {
+    header {
+    padding: 0.1%;
+}
+
+}
+
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    header a {
+        color: white;
+        font-weight: 900;
+        text-decoration: none;
+    }
+
+    header a:hover {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: large;
+        color: #F7A399;
+        text-decoration: underline;
+        text-decoration-thickness: 5px;
+    }
+/* ARTICLE */
+
+article {
+    background-color: white;
+}
+
+.container-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.call-to{
+    margin-top: 5px;
+    display: block;
+    height: 80px;
+    width: 250px;
+    background: #0095ff;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 70px;
+    border-radius: 20px;
+}
+
+.call-to:hover {
+    background: #07c;
+}
+
+.call-to a {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1150px) {
+    .call-to{
+    height: 80px;
+    width: 190px;
+    font-size: medium;
+    line-height: normal;
+}
+
+}
+
+@media screen and (max-width: 640px) {
+    .call-to{
+    height: 25px;
+    width: 70px;
+    font-size: small;
+    line-height: normal;
+}
+
+}
+
+@media screen and (max-width: 500px) { 
+    
+    header {
+        background-color: #EF6351;
+        padding: 1%;
+    }
+
+    .about-img h2 {
+        font-size: large;
+        font-weight: 800;
+    }
+}
+
+
+.green-arrow {
+    animation: grow 2s ease-in-out infinite;
+}
+
+@keyframes grow {
+    0% {
+      font-size: 3em;
+    }
+    50% {
+      font-size: 5em;
+    }
+    100% {
+      font-size: 3em;
+    }
+}
+
+/* section about */
+
+.section-about {
+    background-color: #F38375;
+    display: flex;
+    color: #333;
+}
+
+.section-about .about-text {
+    padding: 3%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+    .section-about .about-text h2 {
+        width: 6ch;
+        animation: typing 2s steps(25),
+        blink .3s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+        font-family: monospace;
+        font-size: 2em;
+    }
+
+    .section-about .about-text p {
+        text-align: center;
+    }
+
+    @keyframes typing{
+        from {
+            width: 0;
+        }
+    }
+
+.section-about .about-img {
+    padding: 3%;
+    background-color: #FBC3BC;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.h2-title {
+    display: flex;
+    justify-content: center;
+}
+
+.section-projects-mobile {
+    display: none;
+}
+
+.section-projects {
+    padding: 5%;
+    background-color: #F7A399;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.section-projects div {
+    padding: 8%;
+    border-radius: 5px;
+}   
+    .section-projects .super-reminder {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url('./Img/super-reminder.png');
+        background-size: 350px;
+        height: 0px;
+        transition: transform .2s;
+    }
+
+    .section-projects .super-reminder h3{
+       cursor: pointer;
+       text-align: center;
+    }
+
+    .section-projects .super-reminder h3:hover {
+        background-color: grey;
+    }
+    .section-projects .super-reminder:hover {
+        background-image: url('./Img/super-reminder.png');
+        background-size: 350px;
+        -ms-transform: scale(1.25);
+        transform: scale(1.25);
+    }
+    .section-projects .module-connexion {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url('./Img/module-connexion.png');
+        background-size: 350px;
+        height: 0px;
+        width: 150px;
+        transition: transform .2s;
+    }
+
+    .section-projects .module-connexion:hover {
+        background-image: url('./Img/module-connexion.png');
+        background-size: 350px;
+        -ms-transform: scale(1.25);
+        transform: scale(1.25);
+    }
+
+    .section-projects .module-connexion h3{
+        cursor: pointer;
+        text-align: center;
+     }
+ 
+     .section-projects .module-connexion h3:hover {
+         background-color: grey;
+     }
+
+    .section-projects .shop {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url('./Img/shop.png');
+        background-size: 350px;
+        height: 0px;
+        height: 0px;
+        transition: transform .2s;
+    }
+
+    .section-projects .shop:hover {
+        background-image: url('./Img/shop.png');
+        background-size: 350px;
+        -ms-transform: scale(1.25);
+        transform: scale(1.25);
+    }
+
+    .section-projects .shop h3{
+        cursor: pointer;
+        background-color: #333;
+     }
+ 
+     .section-projects .shop h3:hover {
+         background-color: grey;
+     }
+
+    .section-projects .project-title {
+        background-color: #333;
+        color: white;
+    }
+
+    .section-projects button, .description {
+        display: none;
+    }
+    .section-projects div:hover {
+        background: linear-gradient(to top, #EF6351 0% , #FBC3BC 70%, #FBC3BC 100%);
+    }
+
+.reminder-description {
+    z-index: 100%;
+    background-color: white;
+    padding: 3%;
+    width: 200px;
+    height: 300px;
+}
+
+.section-skills {
+    display: flex;
+    justify-content: space-around;
+    background-color: #FBC3BC;
+    padding: 1%;
+}
+
+.section-skills .soft-skills h3 {
+    text-align: center;
+}
+
+.section-skills .hard-skills h3 {
+    text-align: center;
+}
+
+.section-skills ul {
+    list-style-type: none;
+}
+
+.section-skills .soft-skills {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-skills .hard-skills {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical-line {
+    border-left: 2px solid;
+    height: auto;
+}
+
+footer {
+    background-color: #FFE3E0;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer-top {
+    display: flex;
+    justify-content: space-around;
+}
+
+    footer ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    footer li {
+        margin: 10%;
+    }
+
+    footer .ft-title{
+        text-align: center;
+    }
+
+footer .footer-bottom {
+
+}
+
+@media screen and (max-width: 1200px) {
+    .section-projects {
+        display: none;
+    }
+
+    .section-projects-mobile {
+        padding: 3%;
+        background-color:#F38375;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }  
+
+    .section-projects-mobile ul {
+        list-style-type: none;
+    }
+
+    .section-projects-mobile ul li {
+        padding: 8%;
+        font-weight: 900;
+        font-size: larger;
+    }
+
+    .section-projects-mobile ul li a {
+        color: black;
+        text-decoration: none;
+        background-color:#F7A399;
+        padding: 2%;
+    }
+
+    .section-projects-mobile ul li a:hover {
+        background-color: #FBC3BC;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    header {
+        padding: 10px;
+    }
+    .section-about .about-img {
+        text-align: center;
+    }
+    .section-about {
+        display: flex;
+    }
+
+    @media (max-width: 480px) {
+        header {
+            padding: 5px;
+            font-size: 16px;
+        }
+    }
+}
